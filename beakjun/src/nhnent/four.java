@@ -96,6 +96,5 @@ public class four {
 			}
 			sortPrio[max] = 0;
 		}
-		
 	}
 }
