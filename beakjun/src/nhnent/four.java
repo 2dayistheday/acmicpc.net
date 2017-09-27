@@ -72,30 +72,21 @@ public class four {
 			}
 		}
 		
+		int first = prio[0]-1;
+		int second = prio[1]-1;
+		int third = prio[2]-1;
+		
+		int []sortPrio = new int[perNum];
+		
 		for(int i = 0; i < perNum; i++) {
-			System.out.println(prioPer[i][0] + " " + prioPer[i][1] + " " + prioPer[i][2]);
+			sortPrio[i]=  prioPer[i][first]*100 + prioPer[i][second]*10 + prioPer[i][third]*1;
 		}
 		
 		for(int i = 0; i < perNum; i++) {
-		
-			int prion = prio[0]-1;
 			int max = 0;
-			
 			for(int j = 1; j < perNum; j++) {
-				if(prioPer[max][prion] < prioPer[j][prion]) {
+				if(sortPrio[max] < sortPrio[j]) {
 					max = j;
-				}else if(prioPer[max][prion] == prioPer[j][prion]) {
-					prion = prio[1]-1;
-					
-					if(prioPer[max][prion] < prioPer[j][prion]) {
-						max = j;
-					}else if(prioPer[max][prion] == prioPer[j][prion]) {
-						prion = prio[2]-1;
-						
-						if(prioPer[max][prion] < prioPer[j][prion]) {
-							max = j;
-						}
-					}
 				}
 			}
 			if(person[max].length == 3) {
@@ -103,11 +94,8 @@ public class four {
 			}else {
 				System.out.println(person[max][0]+" " + person[max][1]);
 			}
-			prioPer[max][0] = 0;
-			prioPer[max][1] = 0;
-			prioPer[max][2] = 0;
+			sortPrio[max] = 0;
 		}
 		
 	}
-
 }

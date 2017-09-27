@@ -1,8 +1,0 @@
-package beakjun;
-
-import java.util.*;
-public class main_2 {
-	String[] arrStr = {"toast", "standard", "bank", "display", "book"};
-	
-	for(int i = 0; i < arrStr.)
-}
