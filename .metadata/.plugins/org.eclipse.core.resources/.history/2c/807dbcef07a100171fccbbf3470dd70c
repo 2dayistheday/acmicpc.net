@@ -1,0 +1,19 @@
+package nhnent;
+import java.util.*;
+
+public class three {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int mSize = sc.nextInt();
+		int [][]map = new int[mSize][mSize];
+		
+		for(int i = 0; i< mSize; i++) {
+			for(int j = 0; j < mSize; j++) {
+				map[i+1][j+1] = System.in.read();
+			}
+		}
+	}
+
+}

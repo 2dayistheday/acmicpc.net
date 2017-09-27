@@ -1,0 +1,17 @@
+package beakjun;
+
+public class main_3 {
+
+	public static void main(String[] args) {
+		
+	}
+	public static int rev_plus(int n) {
+		int rev_n = 0;
+		String nStr = Integer.toString(n);
+		String revStr = null;
+		for(int i = nStr.length(); i>0; i--) {
+			
+		}
+		
+	}
+}

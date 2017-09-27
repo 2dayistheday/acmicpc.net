@@ -1,0 +1,34 @@
+package nhnent;
+
+import java.util.*;
+
+public class one {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		String str=sc.nextLine();
+	    String number[]=str.split(" ");
+	    int len=number.length;
+	      for(int i=0;i<len;i++){
+	         n[i]=Integer.parseInt(words[i]);
+	      }
+
+		
+		Queue que = new LinkedList<Integer>();
+		
+		for(int i = 0; i< 9; i++) {
+			int num = sc.nextInt();
+			if(que.contains(num)) {
+				que.remove(num);
+			}else {
+				if(que.size() == 3) {
+					System.out.println(que.poll());
+				}
+			}
+			que.offer(num);
+		}
+	}
+
+}

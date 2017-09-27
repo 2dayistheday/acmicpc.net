@@ -1,0 +1,21 @@
+package beakjun;
+
+public class main_3 {
+
+	public static void main(String[] args) {
+		int n = 57;
+		int answer = rev_plus(n);
+		System.out.println(answer);
+	}
+	public static int rev_plus(int n) {
+		int rev_n = 0;
+		String nStr = Integer.toString(n);
+		String revStr = null;
+		for(int i = nStr.length(); i>0; i--) {
+			revStr = revStr + nStr.charAt(i-1);
+		}
+		rev_n = Integer.parseInt(revStr);
+		
+		return n + rev_n;
+	}
+}

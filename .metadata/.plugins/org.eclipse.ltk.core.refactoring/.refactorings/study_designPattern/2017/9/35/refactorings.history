@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;study_designPattern/src/study_designPattern.singleton&apos;&#x0A;- Original project: &apos;study_designPattern&apos;&#x0A;- Destination element: &apos;study_designPattern/src/study_designPattern.singleton&apos;&#x0A;- Original elements:&#x0A;     study_designPattern.MyClass.java&#x0A;     study_designPattern.Main.java&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;study_designPattern.singleton" element1="/src&lt;study_designPattern{MyClass.java" element2="/src&lt;study_designPattern{Main.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1504375616625" units="2" version="1.0"/>
+</session>

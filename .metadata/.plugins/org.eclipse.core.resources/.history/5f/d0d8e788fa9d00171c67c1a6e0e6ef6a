@@ -1,0 +1,35 @@
+package beakjun;
+
+public class main_4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] n = {2, 9, 10, 21, 24};
+		for(int i = 1; i < n.length; i++) {
+			int key = n[i];
+			for(int j = i-1; j >= 0; j--) {
+				if(n[j] > 9) {
+					int valD, valN;
+					valD = n[j]/10;
+					valN = n[j]%10;
+					if(valD == key) {
+						if(valN >= key) {
+							break;
+						}
+					}else {
+						if(valD >= key) {
+							break;
+						}
+					}
+					n[j+1] = n[j];
+				}else {
+					if(n[j] >= key) {
+						break;
+					}
+					n[j+1] = n[j];
+				}
+			}
+		}
+	}
+
+}

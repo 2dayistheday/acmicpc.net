@@ -1,0 +1,25 @@
+package beakjun;
+
+public class main_4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] n = { 2, 9, 10, 21, 24 };
+		int nSize = n.length;
+		int[] divN = new int[nSize];
+		int[] rmdN = new int[nSize];
+		int[] sortN = new int[nSize];
+		
+		for(int i = 0; i < nSize; i++) {
+			
+		}
+		
+
+		
+		
+		for (int i = 0; i < n.length; i++) {
+			System.out.println(n[i]);
+		}
+	}
+
+}
