@@ -2,21 +2,23 @@ package dfs_and_bfs;
 
 import java.util.*;
 
+
 public class p_1260 {
 	public static boolean visited[];
 	public static int matrix[][];
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int nodeNum = sc.nextInt();
+		
+		int matSize = sc.nextInt();
 		int lineNum = sc.nextInt();
-		int startNode = sc.nextInt();
+		int first = sc.nextInt();
 		sc.nextLine();
 		
-		matrix = new int[nodeNum+2][nodeNum+2];
-		visited = new boolean[nodeNum+1];
+		matrix = new int[matSize+2][matSize+2];
+		visited = new boolean[matSize+1];
 		
-		while(lineNum-- > 0) {
+		for(int i = 0; i < matSize; i++) {
 			int v = sc.nextInt();
 			int w = sc.nextInt();
 			sc.nextLine();
@@ -24,29 +26,39 @@ public class p_1260 {
 			matrix[w][v] = 1;
 		}
 		
-		for(int i = 1; i <= nodeNum; i++) {
-			for(int j =1; j <= nodeNum; j++) {
-				System.out.print(matrix[i][j] + " ");
-			}
-			System.out.println();
-		}
-		dfs(matrix, nodeNum, startNode);
+		dfs(first);
+		System.out.println();
+		visited = new boolean[matSize+1];
+		bfs(first);
 	}
-	
-	public static void dfs(int [][]matrix, int size, int v) {
-		visited[v] = true;
-		System.out.print(v);
+	public static void dfs(int visit) {
+		visited[visit] = true;
+		System.out.print(visit + " ");
+		int len = matrix.length-1;
 		
-		for(int i = 1; i <= size; i++) {
-			if(matrix[v][i] == 1 & !visited[i]) {
-				dfs(matrix, size, i);
+		for(int i = 1; i < len; i++) {
+			if(!visited[i] & matrix[visit][i] == 1) {
+				dfs(i);
 			}
 		}
 	}
-	
-	public static void bfs(int [][]matrix, int size, int v) {
-		visited[v] = true;
-		System.out.print(v);
+	public static void bfs(int visit) {
+		Queue<Integer> q = new LinkedList<>();
+		int len = matrix.length-1;
+		
+		visited[visit] = true;
+		q.offer(visit);
+		
+		while(!q.isEmpty()) {
+			int x = q.poll();
+			System.out.print(x+" ");
+			for(int i = 1; i < len; i++) {
+				if(matrix[x][i] == 1 & !visited[i]) {
+					visited[i] = true;
+					q.offer(i);
+				}
+			}
+		}
 		
 	}
 }
