@@ -7,13 +7,14 @@ class Main {
 	static int c;
 	
   public static void main(String[] args) {
-				Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
 		m = new int[t+1][t+1];
 		visited = new boolean[t+1][t+1];
 		c = 0;
 		ArrayList<Integer> num= new ArrayList<>();
 		String line;
+		char a = (char)('A'+0);
 		
 		for(int i = 1; i <= t; i++){
 			for(int j = 1; j <= t; j++){

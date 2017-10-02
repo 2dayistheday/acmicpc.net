@@ -34,6 +34,7 @@ public class p_11650 {
 		for(int j = 0; j < t; j++) {
 			System.out.println(arr[j].x + " " + arr[j].y);
 		}
+		
 	}
 }
 class pair{
