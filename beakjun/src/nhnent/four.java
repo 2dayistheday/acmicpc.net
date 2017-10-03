@@ -71,7 +71,13 @@ public class four {
 				}
 			}
 		}
-		
+		Arrays.sort(prioPer, 0, 2);
+		for(int i = 0; i < perNum; i++) {
+			for(int j = 0; j < 3; j++) {
+				System.out.print(prioPer[i][j]+" ");
+			}System.out.println();
+		}
+		/*
 		int first = prio[0]-1;
 		int second = prio[1]-1;
 		int third = prio[2]-1;
@@ -96,5 +102,6 @@ public class four {
 			}
 			sortPrio[max] = 0;
 		}
+		*/
 	}
 }
